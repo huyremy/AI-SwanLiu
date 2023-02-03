@@ -5,7 +5,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 model = load_model('model.h5', compile=False)
-class_names=["YES","NO"]
+class_names=["Dương tính","Âm tính"]
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
 image = Image.open('20230204_061206.jpg').convert('RGB')
