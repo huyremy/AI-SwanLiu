@@ -1,6 +1,7 @@
 from keras.models import load_model
 from PIL import Image, ImageOps
 import numpy as np
+
 model = load_model('model.h5')
 class_names=["YES","NO"]
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
