@@ -1,7 +1,6 @@
 from keras.models import load_model
 from PIL import Image, ImageOps
 import numpy as np
-import warnings
 
 model = load_model('model.h5', compile=False)
 class_names=["Dương tính","Âm tính"]
@@ -20,5 +19,6 @@ index = np.argmax(prediction)
 class_name = class_names[index]
 score = prediction[0][index]
 score = round(score * 100, 3)
+
 print("Tình trạng bệnh : ", class_name)
 print("Khả năng chữa khỏi: ", score, "%")
