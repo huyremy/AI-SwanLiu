@@ -2,7 +2,6 @@ from keras.models import load_model
 from PIL import Image, ImageOps
 import numpy as np
 import warnings
-warnings.filterwarnings("ignore")
 
 model = load_model('model.h5', compile=False)
 class_names=["Dương tính","Âm tính"]
